@@ -27,7 +27,6 @@ async function generateImage(imagePath, prompt) {
   const buffer = await response.arrayBuffer();
   const outputPath = `edited_${Date.now()}.png`;
   fs.writeFileSync(outputPath, Buffer.from(buffer));
-  console.log(`✅ Saved: ${outputPath}`);
   return outputPath;
 }
 
